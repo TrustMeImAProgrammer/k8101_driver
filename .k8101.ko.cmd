@@ -1,0 +1,1 @@
+cmd_/home/snake/Dropbox/Uni/4.Semester/Systemprogrammierung/project/k8101.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/snake/Dropbox/Uni/4.Semester/Systemprogrammierung/project/k8101.ko /home/snake/Dropbox/Uni/4.Semester/Systemprogrammierung/project/k8101.o /home/snake/Dropbox/Uni/4.Semester/Systemprogrammierung/project/k8101.mod.o

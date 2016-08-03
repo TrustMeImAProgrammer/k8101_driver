@@ -5,8 +5,9 @@ PWD := $(shell pwd)
 
 .PHONY: build clean
 
-build:
+build:  test_program.o
 	$(MAKE) -C $(KERNELDIR) M=$(PWD)
+	cc -g -o test_program test_program.o
 
 clean:
 	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c
@@ -14,6 +15,6 @@ clean:
 else
 
 $(info Building with KERNELRELEASE = ${KERNELRELEASE})
-obj-m :=    crash1.o
+obj-m :=    crash1.o k8101.o
 
 endif

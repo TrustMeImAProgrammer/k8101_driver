@@ -1,0 +1,1 @@
+cmd_/home/snake/Dropbox/Uni/4.Semester/Systemprogrammierung/project/built-in.o :=  rm -f /home/snake/Dropbox/Uni/4.Semester/Systemprogrammierung/project/built-in.o; ar rcsD /home/snake/Dropbox/Uni/4.Semester/Systemprogrammierung/project/built-in.o
