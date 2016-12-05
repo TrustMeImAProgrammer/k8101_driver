@@ -142,16 +142,16 @@ static void k8101_disconnect(struct usb_interface* interface) {
 	usb_deregister_dev(interface, &k8101_class);
 	if (!dev) {
 		/* this should actually never happen */
-		printk(KERN_INFO "IT ACTUALLY HAPPENED");
 		mutex_unlock(&open_disc_mutex);
 		return;
 	}
 	/* lock the device */
 	mutex_lock(&dev->lock);
 	dev->is_present = 0;
-	printk(KERN_INFO "K8101 has been disconnected");
+	printk(KERN_INFO "K8101 has been disconnected and is_open = %d", dev->is_open);
 	/* if device is open k8101_release will take care cleaning up */
 	if (dev->is_open) {
+		dev->udev = NULL;
 		mutex_unlock(&dev->lock);
 		mutex_unlock(&open_disc_mutex);
 		return;
@@ -276,6 +276,7 @@ static int k8101_release(struct inode* inode, struct file* file) {
 		return -ENODEV;
 	}
 	dev->is_open = 0;
+	printk(KERN_INFO "Device closed and is_present = %d", dev->is_present);
 	if (!dev->is_present) {
 		/* device was unplugged before the file was released */
 		mutex_unlock(&dev->lock);

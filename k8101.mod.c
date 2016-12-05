@@ -27,8 +27,8 @@ __attribute__((section("__versions"))) = {
 	{ 0x966bacc, __VMLINUX_SYMBOL_STR(usb_register_dev) },
 	{ 0x81fcd7c8, __VMLINUX_SYMBOL_STR(kmem_cache_alloc_trace) },
 	{ 0x92a94ad2, __VMLINUX_SYMBOL_STR(kmalloc_caches) },
-	{ 0x37a0cba, __VMLINUX_SYMBOL_STR(kfree) },
 	{ 0x5f3a3861, __VMLINUX_SYMBOL_STR(usb_deregister_dev) },
+	{ 0x37a0cba, __VMLINUX_SYMBOL_STR(kfree) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
 	{ 0x7d9cc03b, __VMLINUX_SYMBOL_STR(mutex_unlock) },
 	{ 0xbf97e500, __VMLINUX_SYMBOL_STR(mutex_lock) },
@@ -43,4 +43,4 @@ __attribute__((section(".modinfo"))) =
 
 MODULE_ALIAS("usb:v10CFp8101d*dc*dsc*dp*ic*isc*ip*in*");
 
-MODULE_INFO(srcversion, "ECE72831633224EA3D51416");
+MODULE_INFO(srcversion, "3DE03E2DBB32C6AEE44D253");

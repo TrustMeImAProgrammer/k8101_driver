@@ -15,6 +15,6 @@ clean:
 else
 
 $(info Building with KERNELRELEASE = ${KERNELRELEASE})
-obj-m :=    crash1.o k8101.o
+obj-m := k8101.o
 
 endif
